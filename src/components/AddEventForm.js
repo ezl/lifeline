@@ -41,7 +41,17 @@ class AddEventForm extends Component {
         };
 
         this.props.updateTable(entry);
+        this.resetForm();
 
+    }
+
+    resetForm() {
+        this.setState({
+            age: '',
+            happiness: '',
+            event: '',
+            notes: ''
+        });
     }
 
     render() {
