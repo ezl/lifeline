@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './AddEventForm.css';
+import PropTypes from "prop-types";
 
 class AddEventForm extends Component {
+    static propTypes = {
+        updateTable: PropTypes.func.isRequired,
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -25,9 +30,18 @@ class AddEventForm extends Component {
         });
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
         var values = this.state.age + this.state.happiness + this.state.event + this.state.notes;
-        console.log("handleSubmit", values);
+        var entry = {
+            age: this.state.age,
+            happiness: this.state.happiness,
+            event: this.state.event,
+            notes: this.state.notes
+        };
+
+        this.props.updateTable(entry);
+
     }
 
     render() {

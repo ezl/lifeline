@@ -24,7 +24,7 @@ class Table extends Component {
                             (row, i) => (
                                 <tr key={i}>
                                     <td>{row.age}</td>
-                                    <td>{row.score}</td>
+                                    <td>{row.happiness}</td>
                                     <td>{row.event}</td>
                                     <td>{row.notes}</td>
                                 </tr>
