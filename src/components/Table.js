@@ -28,7 +28,7 @@ class Table extends Component {
                                     <td>{row.happiness}</td>
                                     <td>{row.event}</td>
                                     <td>{row.notes}</td>
-                                    <td><a href="#" onClick={() => this.props.removeEntry(i)}>x</a></td>
+                                    <td><button onClick={() => this.props.removeEntry(i)}>x</button></td>
                                 </tr>
                             )
                         )}
