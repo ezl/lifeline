@@ -35,7 +35,9 @@ class App extends Component {
     };
 
     updateTable(entry) {
-        this.setState({data: [...this.state.data, entry]});
+        this.setState({data: [...this.state.data, entry].sort(
+            (a, b) => a.age - b.age)
+        });
     }
 
     render() {
