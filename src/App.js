@@ -9,6 +9,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.updateTable = this.updateTable.bind(this);
+        this.removeEntry = this.removeEntry.bind(this);
     }
 
     state = {
@@ -40,13 +41,19 @@ class App extends Component {
         });
     }
 
+    removeEntry(i) {
+        var data = this.state.data;
+        data.splice(i, 1);
+        this.setState({data: data});
+    }
+
     render() {
         return (
             <div className="App">
                 <h1>Lifeline</h1>
                 <div id='left'>
                     <AddEventForm updateTable={this.updateTable} />
-                    <Table data={this.state.data} />
+                    <Table data={this.state.data} removeEntry={this.removeEntry} />
                 </div>
                 <div id='right'>
                     <SaveLoad />

@@ -17,6 +17,7 @@ class Table extends Component {
                             <th>Happiness</th>
                             <th>Event</th>
                             <th>Notes</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,6 +28,7 @@ class Table extends Component {
                                     <td>{row.happiness}</td>
                                     <td>{row.event}</td>
                                     <td>{row.notes}</td>
+                                    <td><a href="#" onClick={() => this.props.removeEntry(i)}>x</a></td>
                                 </tr>
                             )
                         )}
