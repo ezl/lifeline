@@ -32,7 +32,6 @@ class AddEventForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        var values = this.state.age + this.state.happiness + this.state.event + this.state.notes;
         var entry = {
             age: this.state.age,
             happiness: this.state.happiness,
