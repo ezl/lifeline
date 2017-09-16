@@ -31,8 +31,7 @@ class App extends Component {
                 event: "So much beer!",
                 notes: "baz baz blah blah"
             }
-        ],
-        foo: 'blah blah blah'
+        ]
     };
 
     updateTable(entry) {
@@ -49,7 +48,7 @@ class App extends Component {
                 </div>
                 <div id='right'>
                     <SaveLoad />
-                    <Lifeline />
+                    <Lifeline data={this.state.data} />
                 </div>
             </div>
         );
