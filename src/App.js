@@ -27,6 +27,18 @@ class App extends Component {
                 notes: "bar bar blah blah"
             },
             {
+                age: 16,
+                happiness: 6,
+                event: "2nd girlfriend",
+                notes: "bar bar blah blah"
+            },
+            {
+                age: 17,
+                happiness: 6,
+                event: "First girlfriend",
+                notes: "bar bar blah blah"
+            },
+            {
                 age: 21,
                 happiness: 1,
                 event: "So much beer!",
