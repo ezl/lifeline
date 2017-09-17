@@ -22,27 +22,33 @@ class App extends Component {
             },
             {
                 age: 16,
-                happiness: 6,
+                happiness: 8,
                 event: "First girlfriend",
-                notes: "bar bar blah blah"
-            },
-            {
-                age: 16,
-                happiness: 6,
-                event: "2nd girlfriend",
                 notes: "bar bar blah blah"
             },
             {
                 age: 17,
-                happiness: 6,
-                event: "First girlfriend",
+                happiness: 1,
+                event: "2nd girlfriend",
                 notes: "bar bar blah blah"
+            },
+            {
+                age: 18,
+                happiness: 8,
+                event: "2nd girlfriend",
+                notes: ""
             },
             {
                 age: 21,
                 happiness: 1,
                 event: "So much beer!",
-                notes: "baz baz blah blah"
+                notes: "Legal drinking age!"
+            },
+            {
+                age: 23,
+                happiness: 1,
+                event: "Graduated from college",
+                notes: "Yay it was great to graduate."
             }
         ]
     };
@@ -68,8 +74,8 @@ class App extends Component {
                     <Table data={this.state.data} removeEntry={this.removeEntry} />
                 </div>
                 <div id='right'>
-                    <SaveLoad />
                     <Lifeline data={this.state.data} />
+                    <SaveLoad />
                 </div>
             </div>
         );

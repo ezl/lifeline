@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Table.css';
 import PropTypes from "prop-types";
+import ReactTooltip from 'react-tooltip'
 
 class Table extends Component {
     static propTypes = {
@@ -9,13 +10,14 @@ class Table extends Component {
 
     render() {
         return (
-            <div>
+            <div className="section">
+                <h2>Your Major Life Events</h2>
                 <table>
                     <thead>
                         <tr>
                             <th>Age</th>
+                            <th>What Happened</th>
                             <th>Happiness</th>
-                            <th>Event</th>
                             <th>Notes</th>
                             <th></th>
                         </tr>
@@ -25,15 +27,16 @@ class Table extends Component {
                             (row, i) => (
                                 <tr key={i}>
                                     <td>{row.age}</td>
-                                    <td>{row.happiness}</td>
                                     <td>{row.event}</td>
-                                    <td>{row.notes}</td>
-                                    <td><button onClick={() => this.props.removeEntry(i)}>x</button></td>
+                                    <td>{row.happiness}</td>
+                                    <td>{row.notes && <p className='moreHover' data-tip={row.notes}>More</p>}</td>
+                                    <td><button className='remove' onClick={() => this.props.removeEntry(i)}>&#xd7;</button></td>
                                 </tr>
                             )
                         )}
                     </tbody>
                 </table>
+                <ReactTooltip effect='solid' className='tooltip' place='right' offset={{right: 30}} />
             </div>
         );
     }

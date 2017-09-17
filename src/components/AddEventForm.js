@@ -55,27 +55,27 @@ class AddEventForm extends Component {
 
     render() {
         return (
-            <div id='addEventForm'>
-                <strong>Add Event</strong>
+            <div id='addEventForm' className="section">
+                <h2>Add An Event To Your Lifeline</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className='form-group'>
                         <label>How old were you?</label>
                         <input type="text" name="age" placeholder="Age" value={this.state.age} onChange={this.handleInputChange} />
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label>What happened?</label>
                         <input type="text" name="event" placeholder="Event" value={this.state.event} onChange={this.handleInputChange} />
                     </div>
-                    <div>
-                        <label>How happy were you at this time in your life? (1-10)</label>
+                    <div className='form-group'>
+                        <label>How happy were you at this time in your life (1-10)?</label>
                         <input type="text" name="happiness" placeholder="#" value={this.state.happiness} onChange={this.handleInputChange} />
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label>How did you feel about this / How did it impact you?</label>
                         <br />
                         <textarea type="text" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleInputChange} />
                     </div>
-                    <input type="submit" value="+" />
+                    <input className='submit' type="submit" value="&#x2295; Add Event" />
                 </form>
             </div>
         );

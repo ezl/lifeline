@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './SaveLoad.css';
 
 class SaveLoad extends Component {
     render() {
         return (
-            <div>
+            <div id='saveLoad'>
                <button>Save</button>
                <button>Load</button>
             </div>

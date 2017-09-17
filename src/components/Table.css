@@ -1,0 +1,37 @@
+.tooltip {
+    border-radius: 2px;
+    border: 2px solid #3ec19d;
+    background: #3ec19d !important;
+    text-decoration: none;
+    margin: 1em 0.5em 1em 0em;
+    color: #aaa;
+}
+.tooltip.place-right:after { border: 0 !important;}
+
+table {
+    border-collapse: collapse;
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+}
+
+table th, table td {
+    vertical-align: middle;
+    border-bottom: 2px solid #eceeef;
+    padding: .25rem;
+    border-top: 1px solid #eceeef;
+    text-align: left;
+}
+
+table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+.moreHover {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    margin: 0;
+}
