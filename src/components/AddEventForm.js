@@ -56,11 +56,25 @@ class AddEventForm extends Component {
     render() {
         return (
             <div id='addEventForm'>
+                <strong>Add Event</strong>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="age" placeholder="Age" value={this.state.age} onChange={this.handleInputChange} />
-                    <input type="text" name="happiness" placeholder="#" value={this.state.happiness} onChange={this.handleInputChange} />
-                    <input type="text" name="event" placeholder="Event" value={this.state.event} onChange={this.handleInputChange} />
-                    <input type="text" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleInputChange} />
+                    <div>
+                        <label>How old were you?</label>
+                        <input type="text" name="age" placeholder="Age" value={this.state.age} onChange={this.handleInputChange} />
+                    </div>
+                    <div>
+                        <label>What happened?</label>
+                        <input type="text" name="event" placeholder="Event" value={this.state.event} onChange={this.handleInputChange} />
+                    </div>
+                    <div>
+                        <label>How happy were you at this time in your life? (1-10)</label>
+                        <input type="text" name="happiness" placeholder="#" value={this.state.happiness} onChange={this.handleInputChange} />
+                    </div>
+                    <div>
+                        <label>How did you feel about this / How did it impact you?</label>
+                        <br />
+                        <textarea type="text" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleInputChange} />
+                    </div>
                     <input type="submit" value="+" />
                 </form>
             </div>
