@@ -1,11 +1,10 @@
 .App {
 }
 
-#left {
-    width: 25%;
+#left, #right {
+    width: 40%;
     display: inline-block;
-}
-#right {
-    width: 70%;
-    display: inline-block;
+    vertical-align: top;
+    padding: 1em;
+    border: 1px solid #aaa;
 }
