@@ -2,7 +2,9 @@
   "name": "lifeline",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ezl.github.io/lifeline",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "papaparse": "^4.3.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -10,6 +12,8 @@
     "react-scripts": "1.0.13"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
