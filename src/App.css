@@ -34,7 +34,7 @@ textarea {
     width: 100%;
 }
 
-button, input[type='submit'] {
+button, input[type='submit'], #saveLoad a {
     border-radius: 2px;
     text-decoration: none;
     margin: 1em 0.5em 1em 0em;
@@ -44,7 +44,7 @@ button, input[type='submit'] {
     color: #fff;
     cursor: pointer;
 }
-button:hover, input[type='submit']:hover {
+button:hover, input[type='submit']:hover, #saveLoad a:hover {
     background: #fff;
     color: #aaa;
 }
