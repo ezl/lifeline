@@ -1,0 +1,9 @@
+.custom-tooltip {
+    font-size: 0.8em;
+    background: white;
+    border: 1px solid #3ec19d;
+    padding: 10px 20px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
