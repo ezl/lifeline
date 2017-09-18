@@ -17,9 +17,6 @@ h2 { font-size: 1.2em; }
     width: 600px;
     padding-left: 50px;
 }
-.section {
-    padding-top: 1.5em;
-}
 
 input, textarea {
     display: block;
@@ -32,6 +29,7 @@ input, textarea {
 
 textarea {
     width: 100%;
+    max-width: 500px;
 }
 
 button, input[type='submit'], #saveLoad a {
@@ -49,12 +47,14 @@ button:hover, input[type='submit']:hover, #saveLoad a:hover {
     color: #aaa;
 }
 
-input[type='submit'].submit {
+input[type='submit'].submit, button.submit {
+    display: inline-block;
     border: 2px solid #3ec19d;
     background: #3ec19d;
     color: #fff;
 }
-input[type='submit'].submit:hover {
+input[type='submit'].submit:hover, button.submit:hover {
+    display: inline-block;
     border: 2px solid #3ec19d;
     background: #fff;
     color: #3ec19d;
@@ -71,4 +71,8 @@ input[type='submit'].submit:hover {
     background-color: transparent;
     color: #da5347;
     margin: 0;
+}
+
+.ReactModal__Content h2 {
+    margin-top: 0;
 }
