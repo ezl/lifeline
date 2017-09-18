@@ -16,40 +16,40 @@ class App extends Component {
     state = {
         data: [
             {
+                age: 0,
+                happiness: 5,
+                event: "I was born!",
+                notes: "Look out world, here I come!"
+            },
+            {
                 age: 5,
-                happiness: 3,
-                event: "New Toy",
-                notes: "fo fo blah blah"
-            },
-            {
-                age: 16,
                 happiness: 8,
-                event: "First girlfriend",
-                notes: "bar bar blah blah"
+                event: "Childhood",
+                notes: "I had an awesome childhood! Just played with toys and went to the park and took naps. YEEEEEHAAAAWWW!"
             },
             {
-                age: 17,
+                age: 7,
                 happiness: 1,
-                event: "2nd girlfriend",
-                notes: "bar bar blah blah"
+                event: "My pet fish died.",
+                notes: "First major trauma. Then to add insult to injury, my parents ate the fish for dinner."
             },
             {
                 age: 18,
-                happiness: 8,
-                event: "2nd girlfriend",
+                happiness: 7,
+                event: "Graduated from high school",
                 notes: ""
             },
             {
                 age: 21,
-                happiness: 1,
+                happiness: 8,
                 event: "So much beer!",
                 notes: "Legal drinking age!"
             },
             {
-                age: 23,
-                happiness: 1,
-                event: "Graduated from college",
-                notes: "Yay it was great to graduate."
+                age: 28,
+                happiness: 10,
+                event: "Won the lottery",
+                notes: "I guess that was cool."
             }
         ]
     };
