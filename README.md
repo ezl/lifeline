@@ -5,6 +5,8 @@ Also save your lifeline to a file (CSV) or load a previously saved lifeline.
 Reminder to myself:
 
 To deploy:
+```npm run deploy```
+
 https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages
 
 Ideas:
