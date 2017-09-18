@@ -75,7 +75,7 @@ class App extends Component {
                 </div>
                 <div id='right'>
                     <Lifeline data={this.state.data} />
-                    <SaveLoad />
+                    <SaveLoad data={this.state.data} />
                 </div>
             </div>
         );
