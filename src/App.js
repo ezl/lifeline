@@ -9,6 +9,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.updateTable = this.updateTable.bind(this);
+        this.replaceTable = this.replaceTable.bind(this);
         this.removeEntry = this.removeEntry.bind(this);
     }
 
@@ -59,6 +60,11 @@ class App extends Component {
         });
     }
 
+    replaceTable(data) {
+        data.pop(); // There's a newline at the end for some reason so just pop it off
+        this.setState({data: data});
+    }
+
     removeEntry(i) {
         var data = this.state.data;
         data.splice(i, 1);
@@ -75,7 +81,7 @@ class App extends Component {
                 </div>
                 <div id='right'>
                     <Lifeline data={this.state.data} />
-                    <SaveLoad data={this.state.data} />
+                    <SaveLoad data={this.state.data} replaceTable={this.replaceTable} />
                 </div>
             </div>
         );

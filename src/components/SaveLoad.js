@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './SaveLoad.css';
 import PropTypes from "prop-types";
 import fileDownload from 'js-file-download';
+import ReactFileReader from 'react-file-reader';
+import Papa from 'papaparse';
+import './SaveLoad.css';
 
 
 class SaveLoad extends Component {
     static propTypes = {
         data: PropTypes.array.isRequired,
+        replaceTable: PropTypes.func.isRequired,
     };
 
     constructor(props) {
@@ -46,8 +49,18 @@ class SaveLoad extends Component {
         return result;
     }
 
-    handleLoad() {
-        console.log("load button clicked");
+    handleLoad(files) {
+        var file = files[0];
+        var that = this;
+        window.fff = file;
+        Papa.parse(file, {
+            header: true,
+            dynamicTyping: true,
+            complete: function(results) {
+                var data = results.data;
+                that.props.replaceTable(data);
+            }
+        });
     }
 
     handleSave() {
@@ -60,8 +73,10 @@ class SaveLoad extends Component {
     render() {
         return (
             <div id='saveLoad'>
-               <button onClick={this.handleSave}>Save</button>
-               <button onClick={this.handleLoad}>Load</button>
+                <button onClick={this.handleSave}>Save</button>
+                <ReactFileReader handleFiles={this.handleLoad} multipleFiles={false} fileTypes='csv'>
+                    <button className='btn'>Upload</button>
+                </ReactFileReader>
             </div>
         );
     }

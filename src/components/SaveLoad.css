@@ -1,3 +1,7 @@
 #saveLoad {
     text-align: right;
 }
+
+.react-file-reader, .react-file-reader-button {
+    display: inline;
+}
