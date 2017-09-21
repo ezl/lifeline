@@ -69,7 +69,7 @@ class AddEventForm extends Component {
     render() {
         return (
             <div id='addEventForm' className="section">
-                <button onClick={this.handleOpenModal} className="submit">&#x2295; Add Events To Your Timeline</button>
+                <button onClick={this.handleOpenModal} className="submit">&#x2295; Add Events To Your Lifeline</button>
                 <ReactModal
                      isOpen={this.state.showModal}
                      contentLabel="Add events to your lifeline"
