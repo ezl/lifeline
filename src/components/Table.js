@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Table.css';
 import PropTypes from "prop-types";
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from 'react-tooltip';
+import Confirm from 'react-confirm-bootstrap';
 
 class Table extends Component {
     static propTypes = {
@@ -30,7 +31,15 @@ class Table extends Component {
                                     <td>{row.event}</td>
                                     <td>{row.happiness}</td>
                                     <td>{row.notes && <p className='moreHover' data-tip={row.notes}>More</p>}</td>
-                                    <td><button className='remove' onClick={() => this.props.removeEntry(i)}>&#xd7;</button></td>
+                                    <td>
+                                        <Confirm
+                                            onConfirm={() => this.props.removeEntry(i)}
+                                            body="Are you sure you want to delete this?"
+                                            confirmText="Confirm Delete"
+                                            title="Deleting Stuff">
+                                            <button className='remove' onClick={() => this.props.removeEntry(i)}>&#xd7;</button>
+                                        </Confirm>
+                                    </td>
                                 </tr>
                             )
                         )}

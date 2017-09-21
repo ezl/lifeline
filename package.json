@@ -4,9 +4,11 @@
   "private": true,
   "homepage": "https://ezl.github.io/lifeline",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "gh-pages": "^1.0.0",
     "papaparse": "^4.3.6",
     "react": "^15.6.1",
+    "react-confirm-bootstrap": "^3.1.4",
     "react-dom": "^15.6.1",
     "react-file-reader": "^1.1.2",
     "react-scripts": "1.0.13"
