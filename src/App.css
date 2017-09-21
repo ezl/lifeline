@@ -18,21 +18,7 @@ h2 { font-size: 1.2em; }
     padding-left: 50px;
 }
 
-input, textarea {
-    display: block;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-    text-decoration: none;
-    margin: 0;
-    padding: 0.5em 0.75em;
-}
-
-textarea {
-    width: 100%;
-    max-width: 500px;
-}
-
-button, input[type='submit'], #saveLoad a {
+.btn {
     border-radius: 2px;
     text-decoration: none;
     margin: 1em 0.5em 1em 0em;
@@ -42,20 +28,17 @@ button, input[type='submit'], #saveLoad a {
     color: #fff;
     cursor: pointer;
 }
-button:hover, input[type='submit']:hover, #saveLoad a:hover {
+.btn:hover, .btn:focus {
     background: #fff;
     color: #aaa;
 }
 
-input[type='submit'].submit, button.submit {
-    display: inline-block;
+.submit {
     border: 2px solid #3ec19d;
     background: #3ec19d;
     color: #fff;
 }
-input[type='submit'].submit:hover, button.submit:hover {
-    display: inline-block;
-    border: 2px solid #3ec19d;
+.submit:hover, .submit:focus {
     background: #fff;
     color: #3ec19d;
 }
@@ -64,13 +47,12 @@ input[type='submit'].submit:hover, button.submit:hover {
     border: 2px solid transparent;
     background-color: transparent;
     color: #da5347;
+    padding: 0px 7px 1px;
     margin: 0;
 }
 .remove:hover {
     border: 2px solid #da5347;
-    background-color: transparent;
     color: #da5347;
-    margin: 0;
 }
 
 .ReactModal__Content h2 {

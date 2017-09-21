@@ -36,7 +36,7 @@ class SaveLoad extends Component {
     render() {
         return (
             <div id='saveLoad'>
-                <CSVLink data={this.props.data} filename={FILENAME}>Save</CSVLink>
+                <CSVLink className='btn' data={this.props.data} filename={FILENAME}>Save</CSVLink>
                 <ReactFileReader handleFiles={this.handleLoad} multipleFiles={false} fileTypes='csv'>
                     <button className='btn'>Upload</button>
                 </ReactFileReader>

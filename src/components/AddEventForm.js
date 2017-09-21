@@ -69,7 +69,7 @@ class AddEventForm extends Component {
     render() {
         return (
             <div id='addEventForm' className="section">
-                <button onClick={this.handleOpenModal} className="submit">&#x2295; Add Events To Your Lifeline</button>
+                <button onClick={this.handleOpenModal} className="submit btn">&#x2295; Add Events To Your Lifeline</button>
                 <ReactModal
                      isOpen={this.state.showModal}
                      contentLabel="Add events to your lifeline"
@@ -95,8 +95,8 @@ class AddEventForm extends Component {
                             <br />
                             <textarea type="text" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleInputChange} />
                         </div>
-                        <input className='submit' type="submit" value="&#x2295; Add This Event" />
-                        <button onClick={this.handleCloseModal}>I&apos;m done adding events</button>
+                        <input className='submit btn' type="submit" value="&#x2295; Add This Event" />
+                        <button className='btn' onClick={this.handleCloseModal}>I&apos;m done adding events</button>
                     </form>
                 </ReactModal>
             </div>

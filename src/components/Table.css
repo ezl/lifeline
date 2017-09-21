@@ -8,30 +8,14 @@
 }
 .tooltip.place-right:after { border: 0 !important;}
 
-table {
-    border-collapse: collapse;
-    background-color: transparent;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-    font-size: 0.8em;
-}
-
-table th, table td {
-    vertical-align: middle;
-    border-bottom: 2px solid #eceeef;
-    padding: .25rem;
-    border-top: 1px solid #eceeef;
-    text-align: left;
-}
-
-table tbody tr:nth-of-type(odd) {
-    background-color: rgba(0,0,0,.05);
-}
-
 .moreHover {
+    cursor: pointer;
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.4);
     font-style: italic;
     margin: 0;
+}
+
+tabe.table > tbody > tr > td {
+    vertical-align: middle;
 }

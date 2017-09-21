@@ -13,7 +13,7 @@ class Table extends Component {
         return (
             <div className="section">
                 <h2>Your Major Life Events</h2>
-                <table>
+                <table className='table table-striped table-sm'>
                     <thead>
                         <tr>
                             <th>Age</th>
@@ -37,7 +37,7 @@ class Table extends Component {
                                             body="Are you sure you want to delete this?"
                                             confirmText="Confirm Delete"
                                             title="Deleting Stuff">
-                                            <button className='remove' onClick={() => this.props.removeEntry(i)}>&#xd7;</button>
+                                            <button className='remove btn' onClick={() => this.props.removeEntry(i)}>&#xd7;</button>
                                         </Confirm>
                                     </td>
                                 </tr>
