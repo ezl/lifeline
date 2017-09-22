@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AddEventForm.css';
 import PropTypes from "prop-types";
-import ReactModal from 'react-modal';
+import {Modal} from 'react-bootstrap'
 
 class AddEventForm extends Component {
     static propTypes = {
@@ -70,35 +70,42 @@ class AddEventForm extends Component {
         return (
             <div id='addEventForm' className="section">
                 <button onClick={this.handleOpenModal} className="submit btn">&#x2295; Add Events To Your Lifeline</button>
-                <ReactModal
-                     isOpen={this.state.showModal}
-                     contentLabel="Add events to your lifeline"
-                     shouldCloseOnOverlayClick={true}
-                     style={{overlay: {backgroundColor: 'rgba(0, 0, 0, 0.5)'} }}
+                <Modal
+                    isOpen={this.state.showModal}
+                    aria-labelledby='modal-label'
+                    show={this.state.showModal}
+                    onHide={this.handleCloseModal}
                 >
-                    <h2>Add An Event To Your Lifeline</h2>
-                    <form onSubmit={this.handleSubmit}>
-                        <div className='form-group'>
-                            <label>How old were you?</label>
-                            <input type="text" name="age" placeholder="Age" value={this.state.age} onChange={this.handleInputChange} />
+
+                    <Modal.Header closeButton>
+                          <Modal.Title id="contained-modal-title">Add An Event To Your Timeline</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="modal-body">
+                            <form className='form' onSubmit={this.handleSubmit}>
+                                <div className='form-group'>
+                                    <label>How old were you?</label>
+                                    <input className="form-control" type="text" name="age" placeholder="Age" value={this.state.age} onChange={this.handleInputChange} />
+                                </div>
+                                <div className='form-group'>
+                                    <label>What happened?</label>
+                                    <input className="form-control" type="text" name="event" placeholder="Event" value={this.state.event} onChange={this.handleInputChange} />
+                                </div>
+                                <div className='form-group'>
+                                    <label>How happy were you at this time in your life (1-10)?</label>
+                                    <input className="form-control" type="text" name="happiness" placeholder="#" value={this.state.happiness} onChange={this.handleInputChange} />
+                                </div>
+                                <div className='form-group'>
+                                    <label>How did you feel about this / How did it impact you?</label>
+                                    <br />
+                                    <textarea className="form-control" type="text" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleInputChange} />
+                                </div>
+                                <input className='submit btn' type="submit" value="&#x2295; Add This Event" />
+                                <button className='btn' onClick={this.handleCloseModal}>I&apos;m done adding events</button>
+                            </form>
                         </div>
-                        <div className='form-group'>
-                            <label>What happened?</label>
-                            <input type="text" name="event" placeholder="Event" value={this.state.event} onChange={this.handleInputChange} />
-                        </div>
-                        <div className='form-group'>
-                            <label>How happy were you at this time in your life (1-10)?</label>
-                            <input type="text" name="happiness" placeholder="#" value={this.state.happiness} onChange={this.handleInputChange} />
-                        </div>
-                        <div className='form-group'>
-                            <label>How did you feel about this / How did it impact you?</label>
-                            <br />
-                            <textarea type="text" name="notes" placeholder="Notes" value={this.state.notes} onChange={this.handleInputChange} />
-                        </div>
-                        <input className='submit btn' type="submit" value="&#x2295; Add This Event" />
-                        <button className='btn' onClick={this.handleCloseModal}>I&apos;m done adding events</button>
-                    </form>
-                </ReactModal>
+                    </Modal.Body>
+                </Modal>
             </div>
         );
     }
