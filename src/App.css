@@ -21,8 +21,6 @@ h2 { font-size: 1.2em; }
 .btn {
     border-radius: 2px;
     text-decoration: none;
-    margin: 1em 0.5em 1em 0em;
-    padding: 5px 10px;
     border: 2px solid #aaa;
     background: #aaa;
     color: #fff;
